@@ -1,0 +1,72 @@
+CHARGE = 7                  number of valence electrons
+COARSE = 20.0               coarse energy cutoff (Ha)
+MEDIUM = 25.0               medium energy cutoff (Ha)
+FINE = 28.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+F2 molecule
+
+Ecut           Energy         Energy Diff         Bond          Bond %
+800     -1.29366683E+003    0.06960000      1.41271369      -0.01043250
+900     -1.29372860E+003    0.00783000      1.41289982      0.00274136
+1000    -1.29373098E+003    0.00545000      1.41289830      0.00263389
+1100    -1.29373291E+003    0.00352000      1.41292922      0.00482250
+1200    -1.29373512E+003    0.00131000      1.41287619      0.00106852
+1300    -1.29373569E+003    7.400000e-004   1.41286686      4.081185e-004
+1400    -1.29373581E+003    6.200000e-004   1.41286184      5.339345e-005
+1500    -1.29373643E+003                    1.41286109  
+exp                                         1.42
+
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %    b    b exp   delta b %
+MgF2    4.600     4.623      -0.5      3.029   3.052   -0.8
+KMgF3   3.964     3.978      -0.4
+NaF     4.657     4.579       1.7
+KF      5.311     5.347      -0.7
+CaF2    5.424     5.463      -0.7
+RbF     5.629     5.64       -0.2
+LiF     4.003     3.964       1.0
+YF3     6.296     6.353      -0.9      4.386   4.393   -0.2      6.829   6.850   -0.3
+SrF2    5.752     5.7996     -0.8
+SrFBr   4.172     4.218      -1.1      7.306   7.337   -0.4
+SrFCl   4.079     4.126      -1.1      6.905   6.958   -0.8
+BaFBr   4.472     4.508      -0.8      7.411   7.441   -0.4
+BaFCl   4.358     4.394      -0.8      7.184   7.225   -0.6
+BaFI    4.610     4.654      -0.9      7.917   7.962   -0.6
+KrF2    1.901     1.89        0.6 (bond length)
+XeF2    2.031     1.983       2.4 (bond length)
+CdF2    5.384     5.381       0.0
+CsF     5.980     5.975       0.1
+BaF2    6.166     6.1964     -0.5
+PbF2    5.879     5.943      -1.1
+BiOF    3.772     3.748       0.6      6.189   6.224   -0.6
+NiF2    4.565     4.650      -2.2      3.061   3.084   -0.7
+EuF2    5.795     5.796       0.0
+AcF3    4.269     4.27        0.0      7.535   7.53     0.1
+
+HArF    H-Ar   H-Ar exp delta %   F-Ar F-Ar exp    delta %
+        1.368   1.33     2.8     1.946   1.97        -1.2
+
+END_COMMENT
+
