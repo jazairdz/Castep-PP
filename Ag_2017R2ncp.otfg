@@ -1,0 +1,70 @@
+CHARGE = 19                 number of valence electrons
+COARSE = 21.0               coarse energy cutoff (Ha)
+MEDIUM = 26.5               medium energy cutoff (Ha)
+FINE = 30.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.5           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = LOCAL   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing and structure validation
+============================================
+Ecut          E0 (eV)          delta E0            a           delta a %
+
+400      -4.01345692E+003    28.30133000       4.83406957    16.65931234
+450      -4.02584214E+003    15.91611000       4.41044405     6.43607051
+500      -4.03306765E+003     8.69060000       4.21629794     1.75079430
+550      -4.03701576E+003     4.74249000       4.46753553     7.81384391
+600      -4.03943595E+003     2.32230000       4.30245322     3.82995660
+650      -4.04069378E+003     1.06447000       4.18281872     0.94284905
+700      -4.04129639E+003     0.46186000       4.16639436     0.54648428
+750      -4.04157852E+003     0.17973000       4.16121574     0.42151023
+800      -4.04169830E+003     0.05995000       4.15476006     0.26571702
+850      -4.04174123E+003     0.01702000       4.14893897     0.12523804
+900      -4.04175289E+003     0.00536000       4.14484643     0.02647398
+950      -4.04175489E+003     0.00336000       4.14411009     0.00870394
+1000     -4.04175504E+003     0.00321000       4.14349577    -0.00612129
+1050     -4.04175557E+003     0.00268000       4.14358401    -0.00399177
+1100     -4.04175654E+003     0.00171000       4.14360412    -0.00350643
+1150     -4.04175753E+003     7.200000e-004    4.14366472    -0.00204392
+1200     -4.04175825E+003                      4.14374942     
+exp                                            4.064
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %   
+Ag     4.052     4.064      -0.3
+Ag2O   4.720     4.76       -0.8
+AgBr   5.691     5.7721     -1.4
+AgCl   5.448     5.436       0.2      
+TcAgO4 5.277     5.3026     -0.5      11.429 11.81     -3.2
+GdAg   3.596     3.672      -2.1        
+TmAg   3.619     3.55        1.9
+YbAg   3.620     3.6787     -1.6
+
+END_COMMENT

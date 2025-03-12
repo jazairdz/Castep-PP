@@ -1,0 +1,73 @@
+CHARGE = 19                 number of valence electrons
+COARSE = 21.0               coarse energy cutoff (Ha)
+MEDIUM = 27.0               medium energy cutoff (Ha)
+FINE = 31.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.5           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing and structure validation
+============================================
+Ecut          E0 (eV)          delta E0            a           delta a %
+500     -4.03471908E+003    7.24653000      4.16701807  0.92312570
+550     -4.03822303E+003    3.74258000      4.21431094  2.06853560
+600     -4.04011433E+003    1.85128000      4.18500966  1.35887318
+650     -4.04108482E+003    0.88079000      4.14978908  0.50584797
+700     -4.04157106E+003    0.39455000      4.13919995  0.24938456
+750     -4.04180432E+003    0.16129000      4.13510258  0.15014814
+800     -4.04190791E+003    0.05770000      4.13272925  0.09266733
+850     -4.04194810E+003    0.01751000      4.13101931  0.05125352
+900     -4.04196039E+003    0.00522000      4.12959194  0.01668323
+950     -4.04196293E+003    0.00268000      4.12907425  0.00414501
+1000    -4.04196308E+003    0.00253000      4.12888057  -5.458028e-004
+1050    -4.04196333E+003    0.00228000      4.12885122  -0.00125659
+1100    -4.04196399E+003    0.00162000      4.12889198  -2.693793e-004
+1150    -4.04196473E+003    8.800000e-004   4.12892198  4.570900e-004
+1200    -4.04196526E+003    3.500000e-004   4.12892166  4.493794e-004
+1250    -4.04196552E+003    9.000000e-005   4.12891708  3.385650e-004
+1300    -4.04196561E+003                    4.12890310       
+exp                                         4.064
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %   
+Ag     4.077     4.064       0.3
+Ag2O   4.729     4.76       -0.7
+AgBr   5.709     5.7721     -1.1
+AgCl   5.460     5.436       0.4      
+TcAgO4 5.279     5.3026     -0.4      11.399 11.81     -3.5       
+GdAg   3.639     3.672      -0.9        
+YbAg   3.677     3.6787      0.0
+
+END_COMMENT

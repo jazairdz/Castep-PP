@@ -1,0 +1,44 @@
+CHARGE = 7                  number of valence electrons
+COARSE = 8.0                coarse energy cutoff (Ha)
+MEDIUM = 11.0               medium energy cutoff (Ha)
+FINE = 12.1                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 7.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Ultra-fine, xc-functional: PBESOL
+Tests on At2 dimer in a box
+
+Ecut            Energy              Energy Diff          Bond           Bond %
+200        -1.65003580E+003        4.85113000        2.88150810       -0.26548964
+250        -1.65358998E+003        1.29695000        2.89252975        0.11599053
+300        -1.65458171E+003        0.30522000        2.89016362        0.03409423
+350        -1.65482337E+003        0.06356000        2.89001425        0.02892444
+400        -1.65487544E+003        0.01149000        2.88947810        0.01036725
+450        -1.65488497E+003        0.00196000        2.88936933        0.00660261
+500        -1.65488642E+003        5.100000e-004     2.88936343        0.00639828
+550        -1.65488663E+003        3.000000e-004     2.88927253        0.00325199
+600        -1.65488673E+003        2.000000e-004     2.88928001        0.00351103
+650        -1.65488682E+003        1.100000e-004     2.88925260        0.00256204
+700        -1.65488688E+003        5.000000e-005     2.88918716        2.973330e-004
+750        -1.65488691E+003        2.000000e-005     2.88918655        2.760140e-004
+800        -1.65488693E+003                          2.88917857        
+
+END_COMMENT
+

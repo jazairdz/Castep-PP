@@ -1,0 +1,59 @@
+CHARGE = 15                 number of valence electrons
+COARSE = 36.0               coarse energy cutoff (Ha)
+MEDIUM = 41.0               medium energy cutoff (Ha)
+FINE = 46.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BETA_RC = 1.5  Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 5.5             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 10.0            As Qc, but specifically for l=2 channel
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut               E0            delta E0          a          delta a %            c          delta c %
+    As         
+1250     -5.63228709E+003     0.09542000       3.81514248     0.00148399     11.14743329     2.52907870
+1300     -5.63235751E+003     0.02500000       3.81622739     0.02992128     10.97258917     0.92094110
+1350     -5.63237799E+003     0.00452000       3.81554885     0.01213573     10.90623940     0.31068577
+1400     -5.63238193E+003     5.800000e-004    3.81525765     0.00450287     10.88052382     0.07416541
+1450     -5.63238217E+003     3.400000e-004    3.81513046     0.00116891     10.87288537     0.00391038
+1500     -5.63238251E+003                      3.81508586                    10.87246021     
+exp                                            3.7595                        10.4573    
+
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a      a exp    delta a %     c    c exp   delta c %    b    b exp   delta b %
+AlAs  5.676    5.662      0.2     
+GaAs  5.665    5.638      0.5
+YAs   5.741    5.786     -0.8
+RuAs  5.438    5.4279     0.2      2.972  2.9685    0.1      6.175  6.1834   -0.1
+SnAs  5.720    5.681      0.7  
+InAs  6.077    6.062      0.2
+NiAs  3.607    3.602      0.1      4.939  5.009    -1.4
+NdAs  5.964    5.958      0.1   (FM)
+
+END_COMMENT
+

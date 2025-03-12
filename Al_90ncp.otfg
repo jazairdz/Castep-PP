@@ -1,0 +1,59 @@
+CHARGE = 3                  number of valence electrons
+COARSE = 5.0                coarse energy cutoff (Ha)
+MEDIUM = 7.0                medium energy cutoff (Ha)
+FINE =   9.0                fine energy cutoff (Ha)
+LOCAL_CHANNEL = 1           angular momentum of the local potential
+CORE_RADIUS = 1.6           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = LOCAL   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid: 7x7x7, Grid: Fine, xc-functional: PBE
+
+Ecut          E0              delta E0              a        delta a %
+Al
+150     -1.96629076E+002     0.11004900       2.86876028     0.42005444
+200     -1.96688687E+002     0.05043800       2.86689417     0.35473183
+250     -1.96706345E+002     0.03278000       2.86342890     0.23343112
+300     -1.96723830E+002     0.01529500       2.85949649     0.09577824
+350     -1.96732380E+002     0.00674500       2.85765891     0.03145440
+400     -1.96734630E+002     0.00449500       2.85746519     0.02467328
+450     -1.96735272E+002     0.00385300       2.85740402     0.02253218
+500     -1.96735426E+002     0.00369900       2.85728875     0.01849695
+550     -1.96736022E+002     0.00310300       2.85721123     0.01578334
+600     -1.96737138E+002     0.00198700       2.85750839     0.02618541
+650     -1.96738236E+002     8.890000e-004    2.85717514     0.01451999
+700     -1.96738850E+002     2.750000e-004    2.85692201     0.00565952
+750     -1.96739042E+002     8.300000e-005    2.85680481     0.00155668
+800     -1.96739125E+002                      2.85676033     
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a      a exp    delta a %     c    c exp   delta c %
+Al    4.023    4.020      0.1
+AlAs  5.676    5.662      0.2  
+AlP   5.474    5.451      0.4
+AlSb  6.150    6.135      0.2
+Ni3Al 3.516    3.572     -1.6
+IrAl3 4.274    4.246      0.7      7.746   7.756    -0.1
+AlN   3.121    3.111      0.3      5.001   4.978     0.5
+
+END_COMMENT
