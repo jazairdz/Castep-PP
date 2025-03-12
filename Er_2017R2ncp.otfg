@@ -1,0 +1,75 @@
+CHARGE = 22                 number of valence electrons
+COARSE = 27.6               coarse energy cutoff (Ha)
+MEDIUM = 29.4               medium energy cutoff (Ha)
+FINE = 32.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 4           angular momentum of the local potential
+CORE_RADIUS = 2.0           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 3          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CONFIG_BLOCK_START          Description of the atomic configuration for the generation (one block per channel)
+CONFIG_N : 5                N quantum number
+CONFIG_L : 2                L quantum number
+CONFIG_OCC : 0.1            Occupancy of the state
+CONFIG_BLOCK_END
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q3 = 8.0             As Qc, but specifically for l=3 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+System: hcp Er
+Ecut               Energy          Energy Diff             a            % a                   c               %c
+800        -9.03705517E+003        0.30194000        3.63640120        2.61678675        5.72017667        2.37002755
+850        -9.03730110E+003        0.05601000        3.56457147        0.58980025        5.64060304        0.94595366
+900        -9.03733010E+003        0.02701000        3.54644661        0.07832889        5.59216991        0.07917958
+950        -9.03733371E+003        0.02340000        3.54293539       -0.02075548        5.58779336        8.555066e-004
+1000       -9.03733973E+003        0.01738000        3.54349315       -0.00501591        5.58864532        0.01610244
+1050       -9.03734530E+003        0.01181000        3.54380785        0.00386475        5.58882065        0.01924014
+1100       -9.03734845E+003        0.00866000        3.54359565       -0.00212339        5.58828783        0.00970467
+1150       -9.03735032E+003        0.00679000        3.54341785       -0.00714061        5.58771160       -6.077474e-004
+1200       -9.03735235E+003        0.00476000        3.54345373       -0.00612827        5.58751728       -0.00408537
+1250       -9.03735477E+003        0.00234000        3.54358723       -0.00236081        5.58762607       -0.00213839
+1300       -9.03735711E+003                          3.54367089                          5.58774556        
+exp                                                  3.559                               5.592                                
+
+Structure validation
+====================
+PBESOL, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %   b      b exp  delta b %   c      c exp    delta c %  
+ErC2   3.580      3.619     -1.1                               6.079    6.097    -0.3
+ErB6   4.100      4.10       0.0
+ErAs   5.617      5.732     -2.0
+ErN    4.670      4.839     -3.5
+ErH2   5.101      5.1279    -0.5
+ErLaO3 6.015      6.07      -0.9      5.809   5.85    -0.7     8.407    8.45     -0.5
+
+END_COMMENT
+
