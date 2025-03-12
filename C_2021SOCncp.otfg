@@ -1,0 +1,56 @@
+CHARGE = 4                  number of valence electrons
+COARSE = 15.0               coarse energy cutoff (Ha)
+MEDIUM = 18.0               medium energy cutoff (Ha)
+FINE = 24.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence test (diamond)
+==========================
+Ecut           Etot           dEtot                a          da/a (%)
+300     -3.17162143E+002    5.96514800      3.63757742      2.09059328
+400     -3.20203827E+002    2.92346400      3.57073108      0.21451434
+500     -3.22084247E+002    1.04304400      3.61450808      1.44313985
+600     -3.22812001E+002    0.31529000      3.57302116      0.27878661
+700     -3.23044425E+002    0.08286600      3.56339258      0.00855547
+800     -3.23109814E+002    0.01747700      3.56311510      7.677330e-004
+900     -3.23124648E+002    0.00264300      3.56331049      0.00625156
+1000    -3.23125946E+002    0.00134500      3.56317768      0.00252399
+1100    -3.23126300E+002    9.910000e-004   3.56314416      0.00158324
+1200    -3.23127291E+002                    3.56308774  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %
+C      3.550     3.556     -0.3
+TiC    4.306     4.319     -0.3
+VC     4.124     4.165     -1.0    
+ZrC    4.680     4.683     -0.1
+WC     2.907     2.90423    0.1      2.831   2.83525   -0.1
+TaC    4.465     4.454      0.2
+SiC    4.347     4.34       0.2
+LuC2   3.525     3.563     -1.1      6.016   5.964      0.9
+ThC    5.327     5.346     -0.4
+TbC2   3.646     3.69      -1.2      6.137   6.216     -1.3
+ErC2   3.605     3.619     -0.4      6.067   6.097     -0.5
+UC     4.906     4.9554    -1.0
+UC2    3.495     3.509     -0.4      5.943   5.980     -0.6
+
+END_COMMENT
+
