@@ -1,0 +1,57 @@
+CHARGE = 4                  number of valence electrons
+COARSE = 25                 coarse energy cutoff (Ha)
+MEDIUM = 29                 medium energy cutoff (Ha)
+FINE = 33                   fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 1          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 9.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Ecut            E0            delta E0         a        c        delta a %   delta c %
+    Be   
+400     -7.13909770E+002    47.52362500 2.31051204  3.64425871  2.12403705  3.02526020
+500     -7.38619224E+002    22.81417100 2.33160311  3.66205696  3.05625700  3.52842673
+600     -7.51675291E+002    9.75810400  2.30420753  3.60718473  1.84537916  1.97715757
+700     -7.57720371E+002    3.71302400  2.28668181  3.58181661  1.07074688  1.25998659
+800     -7.60216935E+002    1.21646000  2.27887480  3.56210199  0.72567911  0.70264312
+900     -7.61107026E+002    0.32636900  2.26903144  3.54729511  0.29060498  0.28404408
+1000    -7.61367038E+002    0.06635700  2.26449834  3.54052355  0.09024327  0.09260818
+1100    -7.61423111E+002    0.01028400  2.26304033  3.53814788  0.02579965  0.02544685
+1200    -7.61429416E+002    0.00397900  2.26249985  3.53732207  0.00191058  0.00210072
+1300    -7.61429833E+002    0.00356200  2.26239711  3.53716342  -0.00263069 -0.00238462
+1400    -7.61431552E+002    0.00184300  2.26242053  3.53719680  -0.00159548 -0.00144090
+1500    -7.61433395E+002                2.26245662  3.53724777  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+
+        a        a exp    delta a %     c     c exp    delta c %
+Be     2.249     2.2856     -1.6     3.515    3.5832    -2.0
+BeO    2.676     2.6979     -0.8     4.351    4.3772    -0.6	
+BeS    4.820     4.866      -0.9     
+BeSe   5.123     5.139      -0.3
+PdBe   2.801     2.813      -0.4
+
+END_COMMENT
+

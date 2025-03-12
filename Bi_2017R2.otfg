@@ -1,0 +1,77 @@
+CHARGE = 15                 number of valence electrons
+COARSE = 8.0                coarse energy cutoff (Ha)
+MEDIUM = 9.5                medium energy cutoff (Ha)
+FINE = 11.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.5           core radius (a.u.)
+BETA_RADIUS = 2.5           beta_rc (a.u.) - requires the presence of RINNER
+RINNER = 1.6                Rinner (a.u.) - requires the presence of BETA_RADIUS
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = USP && USP          Type: zero or more of NCP, USP, LOCAL, NCP_PROJ_ONLY, USP_PROJ_ONLY, PSEUDIZE_ONLY. LOCAL can be used only once. 
+CHANNEL_INFO_BETA_RC = 2.3 && 2.3       Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+CORE_HOLE_INFO:
+
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.3           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0                  delta E0                a           delta a %               c           delta c %
+    Bi                  
+300        -4.25387221E+003        0.05197000        4.60567819        0.27142033        12.15325464        1.16421658
+350        -4.25392173E+003        0.00245000        4.59416966        0.02086497        12.01927391        0.04895519
+400        -4.25392231E+003        0.00187000        4.59368731        0.01036378        12.01799746        0.03832993
+450        -4.25392279E+003        0.00139000        4.59307145       -0.00304436        12.01124741       -0.01785778
+500        -4.25392287E+003        0.00131000        4.59280991       -0.00873843        12.01960259        0.05169114
+550        -4.25392332E+003        8.600000e-004     4.59296062       -0.00545718        12.01362192        0.00190777
+600        -4.25392374E+003        4.400000e-004     4.59328560        0.00161802        12.01262241       -0.00641226
+650        -4.25392384E+003        3.400000e-004     4.59354563        0.00727922        12.01316926       -0.00186025
+700        -4.25392387E+003        3.100000e-004     4.59362629        0.00903510        12.01095799       -0.02026691
+750        -4.25392401E+003        1.700000e-004     4.59343849        0.00494647        12.00756822       -0.04848348
+800        -4.25392418E+003                          4.59321128                          12.01339273        0
+exp                                                  4.545925                            11.862729   
+
+
+Structure validation
+====================
+
+PBESOL, 600 eV, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %
+InBi   4.913     4.9589     -0.9      4.806  4.8396   -0.7
+PtBi2  6.720     6.7014      0.3
+Bi2O3  5.515     5.525      -0.2
+BiOF   3.732     3.748      -0.5      6.164  6.224    -1.0
+Bi     4.533     4.533       0.0     11.550 11.797    -2.1
+LaBi   6.582     6.565       0.2
+NdBi   6.494     6.424       1.1   (AFM)
+
+END_COMMENT
+

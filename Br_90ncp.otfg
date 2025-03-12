@@ -1,0 +1,67 @@
+CHARGE = 17                 number of valence electrons
+COARSE = 38.0               coarse energy cutoff (Ha)
+MEDIUM = 43.0               medium energy cutoff (Ha)
+FINE = 45.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BETA_RC = 1.5  Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 10.0            As Qc, but specifically for l=2 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0             delta E0             a           delta a %
+    Br diatomic orthorombic cell, a=6.05, b=5.95, c=6.00 Angstrom  
+950      -7.45264823E+003     9.45762000       2.31870223     -0.06552091
+1000     -7.46152029E+003     5.02159000       2.31938026     -0.03629813
+1050     -7.46650137E+003     2.53105000       2.31969763     -0.02261969
+1100     -7.46918533E+003     1.18907000       2.31996928     -0.01091175
+1150     -7.47053443E+003     0.51452000       2.32027904      0.00243855
+1200     -7.47116556E+003     0.19895500       2.32026028      0.00162985
+1250     -7.47143003E+003     0.06672000       2.32022154     -3.960654e-005
+1300     -7.47152764E+003     0.01791500       2.32022835      2.539739e-004
+1350     -7.47155695E+003     0.00326000       2.32022896      2.801988e-004
+1400     -7.47156261E+003     4.300000e-004    2.32022222     -1.011995e-005
+1450     -7.47156296E+003     2.550000e-004    2.32022103     -6.151368e-005
+1500     -7.47156347E+003                      2.32022246     
+exp                                            2.284   
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp     delta a %    c    c exp   delta c %
+LiBr  5.414      5.445     -0.6
+NaBr  5.947      5.973     -0.4
+KBr   6.545      6.54       0.0
+CuBr  5.613      5.6905    -1.4
+RbBr  6.851      6.82       0.5
+SrFBr 4.168      4.218     -1.2       7.315   7.337   -0.3
+BaFBr 4.470      4.508     -0.8       7.410   7.441   -0.4
+AgBr  5.691      5.7721    -1.4 
+CsBr  4.252      4.286     -0.8
+TlBr  3.913      3.97      -1.4
+
+END_COMMENT
+
