@@ -1,0 +1,76 @@
+CHARGE = 18                 number of valence electrons
+COARSE = 21.0               coarse energy cutoff (Ha)
+MEDIUM = 25.7               medium energy cutoff (Ha)
+FINE = 27.6                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 4           angular momentum of the local potential
+CORE_RADIUS = 2.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 7          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 3          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q3 = 8.0             As Qc, but specifically for l=3 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+
+Ecut           E0           delta E0        
+    Cm                  
+300        -10871.35       88.514825
+350        -10925.53       74.97085
+400        -11025.25       50.041475
+450        -11114.33       27.769325
+500        -11166.73       14.671325
+550        -11199.25        6.540875
+600        -11215.65        2.4398
+650        -11221.92        0.873925
+700        -11224.35        0.266225
+750        -11225.17        0.060225
+800        -11225.37        0.009275
+850        -11225.41        0.0009
+900        -11225.41        0.00015
+950        -11225.41        0.000125
+1000       -11225.41        0
+
+    
+Structure validation
+====================
+
+PBESOL, 600 eV, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %   c        c exp    delta c %
+Cm      3.479     3.496    -0.5      11.309    11.331     -0.2
+CmN     4.953     5.027    -1.5
+CmO2    5.372     5.372     0.0
+CmAs    5.829     5.901    -1.2
+CmS2    3.857     3.926    -1.8       7.927     8.01      -1.0
+CmSe2   4.069     4.096    -0.7       8.299     8.369     -0.8
+
+END_COMMENT
+
