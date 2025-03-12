@@ -1,0 +1,95 @@
+CHARGE = 18                 number of valence electrons
+COARSE = 23.9               coarse energy cutoff (Ha)
+MEDIUM = 26.5               medium energy cutoff (Ha)
+FINE = 31.2                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 4           angular momentum of the local potential
+CORE_RADIUS = 2.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 3          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q3 = 8.0             As Qc, but specifically for l=3 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut             E0         delta E0              a          c       delta a %    delta c %
+    Gd 
+600		-5.67683280E+003	6.57663500		4.10567466	6.69591317	8.01457975	6.82168865
+650		-5.68455824E+003	2.71391500		4.65569250	7.50138201	22.48478299	19.67154783
+700		-5.68830006E+003	0.84300500		4.30175795	7.00623156	13.17325791	11.77228070
+750		-5.68962394E+003	0.18106500		3.94745342	6.51657248	3.85199941	3.96061872
+800		-5.68992567E+003	0.03020000		3.84857635	6.35147503	1.25068163	1.32677510
+850		-5.68997916E+003	0.00345500		3.81421338	6.29709810	0.34663971	0.45928541
+900		-5.68998402E+003	0.00102500		3.80182459	6.26777714	0.02070796	-0.00847965
+950		-5.68998417E+003	9.500000e-004	3.80026352	6.26947287	-0.02036158	0.01857277
+1000	-5.68998470E+003	6.850000e-004	3.80218735	6.26993322	0.03025161	0.02591687
+1050	-5.68998499E+003	5.400000e-004	3.80242384	6.26792479	0.03647332	-0.00612417
+1100	-5.68998503E+003	5.200000e-004	3.80196289	6.27144097	0.02434646	0.04997039
+1150	-5.68998516E+003	4.550000e-004	3.80039130	6.27092266	-0.01700002	0.04170162
+1200	-5.68998545E+003	3.100000e-004	3.80243664	6.26978643	0.03681007	0.02357499
+1250	-5.68998575E+003	1.600000e-004	3.80309897	6.26806893	0.05423510	-0.00382473
+1300	-5.68998594E+003	6.500000e-005	3.80215154	6.27048427	0.02930947	0.03470788
+1350	-5.68998601E+003	3.000000e-005	3.80292338	6.26792283	0.04961555	-0.00615551
+1400	-5.68998607E+003					3.80103748	6.26830867	
+	
+650        -5.70304255E+003        2.35249500        3.98146620       10.41505920        6.41599188        9.96602123
+700        -5.70648095E+003        0.63329500        3.75457862        4.12295354        6.05307229        3.74581013
+750        -5.70747948E+003        0.13403000        3.65917326        1.47714719        5.90849973        1.26792845
+800        -5.70770625E+003        0.02064500        3.62083449        0.41392647        5.85593716        0.36703939
+850        -5.70773760E+003        0.00497000        3.60834805        0.06764913        5.83804524        0.06038329
+900        -5.70773864E+003        0.00445000        3.60570953       -0.00552282        5.83421929       -0.00519102
+950        -5.70774083E+003        0.00335500        3.60576173       -0.00407537        5.83430623       -0.00370090
+1000       -5.70774417E+003        0.00168500        3.60603366        0.00346602        5.83471119        0.00323972
+1050       -5.70774637E+003        5.850000e-004     3.60607334        0.00456637        5.83475085        0.00391952
+1100       -5.70774724E+003        1.500000e-004     3.60599801        0.00247738        5.83465747        0.00231911
+1150       -5.70774744E+003        5.000000e-005     3.60593710        7.880668e-004     5.83456031        6.537421e-004
+1200       -5.70774748E+003        3.000000e-005     3.60591021        4.231056e-005     5.83452215       -2.302455e-007
+1250       -5.70774751E+003        1.500000e-005     3.60591142        7.602310e-005     5.83452456        4.111864e-005
+1300       -5.70774754E+003                          3.60590868                          5.83452216        
+
+    
+Structure validation
+====================
+
+WC, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %      b         b exp    b%     c    c exp   c% 
+GdAg   3.639     3.672       -0.9        
+GdRh   3.438     3.44        -0.1
+GdAs   5.849     5.854       -0.1
+GdAu   3.590     3.6009      -0.3
+GdH2   5.288     5.297       -0.2
+GdN    4.973     4.987       -0.3
+GdSe   5.777     5.775        0.0
+GdB6   4.108     4.112       -0.1
+GdSi   7.981     7.996       -0.2       3.853    3.859    -0.2    5.743   5.753   -0.2 
+
+END_COMMENT
+

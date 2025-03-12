@@ -1,0 +1,60 @@
+CHARGE = 13                 number of valence electrons
+COARSE = 35.0               coarse energy cutoff (Ha)
+MEDIUM = 39.3               medium energy cutoff (Ha)
+FINE = 45.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BETA_RC = 1.5  Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 4.5             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 9.5             As Qc, but specifically for l=2 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Orthrhombic Ga
+Ecut        Energy          Energy Diff         a           b           c           % a         % b                 % c
+950     -8.22408814E+003    2.91415250      3.32917090  30.13308794 6.50809457  -26.36795648    288.58379935    39.87171614
+1000    -8.23166179E+003    1.02074000      4.72178763  8.13509388  4.93587365  4.43286999      4.90679526      6.08160499
+1050    -8.23408606E+003    0.41467250      4.63071464  7.93936328  4.77075760  2.41858758      2.38273469      2.53293730
+1100    -8.23514211E+003    0.15066000      4.57866250  7.84170989  4.71025505  1.26733843      1.12343703      1.23261898
+1150    -8.23555846E+003    0.04657250      4.54473296  7.79607766  4.67765631  0.51691088      0.53498276      0.53200799
+1200    -8.23569638E+003    0.01209250      4.53038262  7.77117987  4.66273043  0.19952109      0.21391124      0.21122149
+1250    -8.23573026E+003    0.00362250      4.52430779  7.75838628  4.65577613  0.06516267      0.04893041      0.06176003
+1300    -8.23573438E+003    0.00259250      4.52136573  7.75492883  4.65289877  9.257460e-005   0.00434453      -8.000024e-005
+1350    -8.23573489E+003    0.00246500      4.52085208  7.75402966  4.65243464  -0.01126795     -0.00725078     -0.01005521
+1400    -8.23573754E+003    0.00180250      4.52099818  7.75445034  4.65226561  -0.00803682     -0.00182592     -0.01368802
+1450    -8.23574143E+003    8.300000e-0 04  4.52123092  7.75443204  4.65276137  -0.00288919     -0.00206182     -0.00303297
+1500    -8.23574475E+003                    4.52136155  7.75459193  4.65290250  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %  
+GaAs   5.669     5.638     0.5
+GaN    4.502     4.52     -0.4
+GaP    5.438     5.450    -0.2
+GaSb   6.133     6.118     0.2
+
+END_COMMENT
+

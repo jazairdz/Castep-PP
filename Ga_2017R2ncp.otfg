@@ -1,0 +1,62 @@
+CHARGE = 13                 number of valence electrons
+COARSE = 34.0               coarse energy cutoff (Ha)
+MEDIUM = 39.0               medium energy cutoff (Ha)
+FINE = 41.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BETA_RC = 1.5  Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 4.5             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 9.5             As Qc, but specifically for l=2 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ga2 in a cell (line)
+Ecut         Energy           Energy Diff
+850      -4.09926602E+003     8.22697500
+900      -4.10710848E+003     4.30574500
+950      -4.11137891E+003     2.17053000
+1000     -4.11378723E+003     0.96637000
+1050     -4.11491753E+003     0.40122000
+1100     -4.11542540E+003     0.14728500
+1150     -4.11562792E+003     0.04602500
+1200     -4.11569581E+003     0.01208000
+1250     -4.11560994E+003     0.05501500
+1300     -4.11571477E+003     0.00260000
+1350     -4.11498475E+003     0.36761000
+1400     -4.11571636E+003     0.00180500
+1450     -4.11571830E+003     8.350000e-004
+1500     -4.11571997E+003     
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %  
+GaAs   5.665     5.638     0.5
+GaN    4.504     4.52     -0.4
+GaP    5.441     5.450    -0.2
+GaSb   6.108     6.118    -0.2
+
+END_COMMENT
+
