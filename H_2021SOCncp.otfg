@@ -1,0 +1,57 @@
+CHARGE = 1                  number of valence electrons
+COARSE = 13.0               coarse energy cutoff (Ha)
+MEDIUM = 18.0               medium energy cutoff (Ha)
+FINE =   22.0               fine energy cutoff (Ha)
+LOCAL_CHANNEL = 1           angular momentum of the local potential
+CORE_RADIUS = 0.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 1          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence test
+================
+Ecut         Energy           Energy Diff        Bond           Bond %
+300     -3.11991798E+001    0.54098290      0.76699529  2.34633584
+400     -3.14822062E+001    0.25795650      0.76297218  1.80949989
+500     -3.16230300E+001    0.11713270      0.75683444  0.99049257
+600     -3.16897302E+001    0.05043250      0.75244222  0.40440359
+700     -3.17196282E+001    0.02053450      0.75035106  0.12536255
+800     -3.17324122E+001    0.00775050      0.74961001  0.02647820
+900     -3.17374719E+001    0.00269080      0.74947335  0.00824326
+1000    -3.17391874E+001    9.753000e-004   0.74943422  0.00302158
+1100    -3.17395784E+001    5.843000e-004   0.74942842  0.00224742
+1200    -3.17396045E+001    5.582000e-004   0.74942867  0.00228086
+1300    -3.17396650E+001    4.977000e-004   0.74943108  0.00260225
+1400    -3.17398647E+001    2.980000e-004   0.74942017  0.00114694
+1500    -3.17401627E+001                    0.74941158    
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp      delta a %
+LiH    3.981      4.0271    -1.1
+NaH    4.827      4.880     -1.1
+RbH    5.938      6.037     -1.6
+YH2    5.141      5.199     -1.1
+PdH    4.091      4.02       1.7
+CsH    6.266      6.376     -1.7
+LuH2   4.971      5.033     -1.2
+GdH2   5.288      5.297     -0.2
+ErH2   5.098      5.1279    -0.6
+HoH2   5.107      5.165     -1.1
+DyH2   5.175      5.201     -0.5
+TbH2   5.192      5.246     -1.0
+
+HArF    H-Ar   H-Ar exp delta %   F-Ar F-Ar exp    delta %
+        1.368   1.33     2.8     1.946   1.97        -1.2
+
+END_COMMENT
+

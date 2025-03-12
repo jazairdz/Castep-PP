@@ -1,0 +1,65 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 8.0                coarse energy cutoff (Ha)
+MEDIUM = 10.0               medium energy cutoff (Ha)
+FINE = 12.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 5.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0                  delta E0
+    Hg2 in a box 
+300     -2.26581121E+003    0.07988500
+350     -2.26596367E+003    0.00365500
+400     -2.26596533E+003    0.00282500
+450     -2.26596705E+003    0.00196500
+500     -2.26596731E+003    0.00183500
+550     -2.26596800E+003    0.00149000
+600     -2.26596879E+003    0.00109500
+650     -2.26596891E+003    0.00103500
+700     -2.26596901E+003    9.850000e-004
+750     -2.26596925E+003    8.650000e-004
+800     -2.26596920E+003    8.900000e-004
+850     -2.26596945E+003    7.650000e-004
+900     -2.26596972E+003    6.300000e-004
+950     -2.26597019E+003    3.950000e-004
+1000    -2.26597022E+003    3.800000e-004
+1050    -2.26597034E+003    3.200000e-004
+1100    -2.26597039E+003    2.950000e-004
+1150    -2.26597062E+003    1.800000e-004
+1200    -2.26597098E+003    0
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c      c exp   delta c %      
+Hg2Cl2 4.554     4.4795      1.7      10.986  10.9054     0.7
+Hg2I2  4.886     4.8974     -0.2      11.673  11.649      0.2
+HgS    5.874     5.8517      0.4
+HgSe   6.183     6.084       1.6
+HgTe   6.532     6.465       1.0
+
+END_COMMENT
+

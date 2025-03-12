@@ -1,0 +1,52 @@
+CHARGE = 1                  number of valence electrons
+COARSE = 11.0               coarse energy cutoff (Ha)
+MEDIUM = 15.0               medium energy cutoff (Ha)
+FINE =   18.0               fine energy cutoff (Ha)
+LOCAL_CHANNEL = 1           angular momentum of the local potential
+CORE_RADIUS = 0.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 1          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence test
+================
+Ecut         Energy           Energy Diff        Bond           Bond %
+300       -3.11992078E+001     0.27048405       0.76697897     2.34342557
+400       -3.14822253E+001     0.12897530       0.76294106     1.80461835
+500       -3.16230443E+001     0.05856580       0.75684409     0.99105716
+600       -3.16897441E+001     0.02521590       0.75248505     0.40939912
+700       -3.17196418E+001     0.01026705       0.75035339     0.12495647
+800       -3.17324255E+001     0.00387520       0.74958417     0.02231513
+900       -3.17374854E+001     0.00134525       0.74942194     6.668295e-004
+1000      -3.17392004E+001     4.877500e-004    0.74940585    -0.00148059
+1100      -3.17395915E+001     2.922000e-004    0.74940526    -0.00155910
+1200      -3.17396176E+001     2.791500e-004    0.74943755     0.00275006
+1300      -3.17396782E+001     2.488500e-004    0.74943627     0.00257886
+1400      -3.17398779E+001     1.490000e-004    0.74943046     0.00180417
+1500      -3.17401759E+001                      0.74941694     
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp      delta a %
+LiH   3.981      4.0271    -1.1
+NaH   4.818      4.880     -1.3
+RbH   5.930      6.037     -1.8
+YH2   5.138      5.199     -0.9
+PdH   4.075      4.02       1.4
+CsH   6.266      6.376     -1.7
+LuH2  4.946      5.033     -1.7
+
+HArF    H-Ar   H-Ar exp delta %   F-Ar F-Ar exp    delta %
+        1.369   1.33     2.9     1.942   1.97        -1.4
+
+END_COMMENT
+

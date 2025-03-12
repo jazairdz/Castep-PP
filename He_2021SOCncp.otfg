@@ -1,0 +1,37 @@
+CHARGE = 2                  number of valence electrons
+COARSE = 15.0               coarse energy cutoff (Ha)
+MEDIUM = 20.0               medium energy cutoff (Ha)
+FINE =   28.0               fine energy cutoff (Ha)
+LOCAL_CHANNEL = 1           angular momentum of the local potential
+CORE_RADIUS = 1.0           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 1          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut       Energy           Energy Diff            a              c             % a            % c
+400     -1.52489862E+002    3.25250200      3.55588689      5.79931062  0.02893924      0.02660696
+500     -1.54394135E+002    1.34822900      3.55560325      5.79899833  0.02096034      0.02122060
+600     -1.55243968E+002    0.49839600      3.55540222      5.79864561  0.01530522      0.01513683
+700     -1.55583935E+002    0.15842900      3.55512165      5.79822166  0.00741271      0.00782465
+800     -1.55700580E+002    0.04178400      3.55499999      5.79799998  0.00399016      0.00400100
+900     -1.55731948E+002    0.01041600      3.55489885      5.79783515  0.00114513      0.00115800
+1000    -1.55737078E+002    0.00528600      3.55486592      5.79778078  2.188727e-004   2.202225e-004
+1100    -1.55737277E+002    0.00508700      3.55485561      5.79776382  -7.131521e-005  -7.229854e-005
+1200    -1.55738150E+002    0.00421400      3.55485623      5.79776490  -5.386208e-005  -5.366860e-005
+1300    -1.55739833E+002    0.00253100      3.55485773      5.79776729  -1.153029e-005  -1.236641e-005
+1400    -1.55741408E+002    9.560000e-004   3.55485829      5.79776818  4.182310e-006   2.879635e-006
+1500    -1.55742364E+002                    3.55485814      5.79776801  
+
+END_COMMENT
+

@@ -1,0 +1,65 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 13.0               coarse energy cutoff (Ha)
+MEDIUM = 19.5               medium energy cutoff (Ha)
+FINE = 23.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+Ecut           E0             delta E0           a          c         delta a %      delta c %
+    Hf    
+200     -3.30123445E+003    15.55813500     3.41654981  5.41200599  5.77778767      6.14969822
+250     -3.31465710E+003    8.84681000      3.30977703  5.25919750  2.47205851      3.15255163
+300     -3.32181528E+003    5.26772000      3.26390494  5.16632652  1.05183974      1.33100401
+350     -3.32627864E+003    3.03604000      3.25596346  5.13993516  0.80596838      0.81337081
+400     -3.32904366E+003    1.65353000      3.24612747  5.12113531  0.50144200      0.44463523
+450     -3.33066502E+003    0.84285000      3.24580406  5.11806190  0.49142918      0.38435427
+500     -3.33154857E+003    0.40107500      3.23983726  5.11144740  0.30669433      0.25461914
+550     -3.33199186E+003    0.17943000      3.23597968  5.10490975  0.18726235      0.12639132
+600     -3.33220102E+003    0.07485000      3.23381985  5.10273553  0.12039311      0.08374667
+650     -3.33229248E+003    0.02912000      3.23195741  5.10041223  0.06273105      0.03817815
+700     -3.33232985E+003    0.01043500      3.23101298  5.09953044  0.03349106      0.02088290
+750     -3.33234404E+003    0.00334000      3.23046414  5.09902135  0.01649885      0.01089779
+800     -3.33234885E+003    9.350000e-004   3.23015615  5.09869240  0.00696326      0.00444575
+850     -3.33235023E+003    2.450000e-004   3.23000588  5.09854738  0.00231094      0.00160144
+900     -3.33235057E+003    7.500000e-005   3.22995122  5.09849246  6.184868e-004   5.242789e-004
+950     -3.33235065E+003    3.500000e-005   3.22993746  5.09846958  1.925782e-004   7.552492e-005
+1000    -3.33235072E+003                    3.22993124  5.09846573  
+exp                                         3.1946      5.0511  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+           a        a exp    delta a %     c    c exp   delta c %
+SrHfO3    4.125     4.069       1.4
+Hf        3.183     3.1967     -0.4      5.050  5.0578    -0.2
+
+END_COMMENT
+

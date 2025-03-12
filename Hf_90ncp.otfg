@@ -1,0 +1,65 @@
+CHARGE = 12                 number of valence electrons
+COARSE = 12.0               coarse energy cutoff (Ha)
+MEDIUM = 18.8               medium energy cutoff (Ha)
+FINE = 21.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+Ecut           E0             delta E0           a          delta a %         c          delta c %
+    Hf    
+200     -3.30747159E+003     9.30628000     3.32835912     3.73111292     5.27217587     4.33948206
+250     -3.31481000E+003     5.63707500     3.23496429     0.82038465     5.11473547     1.22364333
+300     -3.31874797E+003     3.66809000     3.21176752     0.09743774     5.09218132     0.77728330
+350     -3.32157610E+003     2.25402500     3.21784642     0.28689167     5.07806559     0.49792457
+400     -3.32350445E+003     1.28985000     3.21436128     0.17827443     5.07046122     0.34742964
+450     -3.32471227E+003     0.68594000     3.21878758     0.31622392     5.07067141     0.35158944
+500     -3.32540561E+003     0.33927000     3.21597017     0.22841677     5.06244458     0.18877551
+550     -3.32576716E+003     0.15849500     3.21210161     0.10784981     5.05866988     0.11407210
+600     -3.32594612E+003     0.06901500     3.21146645     0.08805476     5.05656960     0.07250619
+650     -3.32602896E+003     0.02759500     3.21046567     0.05686456     5.05495614     0.04057485
+700     -3.32606398E+003     0.01008500     3.20948997     0.02645606     5.05394314     0.02052700
+750     -3.32607741E+003     0.00337000     3.20896399     0.01006325     5.05331145     0.00802543
+800     -3.32608219E+003     9.800000e-004  3.20879908     0.00492367     5.05308183     0.00348127
+850     -3.32608369E+003     2.300000e-004  3.20870351     0.00194540     5.05301740     0.00220605
+900     -3.32608407E+003     4.000000e-005  3.20865745     5.096705e-004  5.05293257     5.272953e-004
+950     -3.32608414E+003     5.000000e-006  3.20864468     1.119336e-004  5.05291008     8.219545e-005
+1000    -3.32608415E+003                    3.20864109                    5.05290593     
+exp                                         3.1946                        5.0511  
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+           a        a exp    delta a %     c    c exp   delta c %
+SrHfO3    4.084     4.069       0.4     
+Hf        3.160     3.1967     -1.1      4.999  5.0578    -1.2
+
+END_COMMENT
+
