@@ -1,0 +1,58 @@
+CHARGE = 9                  number of valence electrons
+COARSE = 9.0                coarse energy cutoff (Ha)
+MEDIUM = 12.0               medium energy cutoff (Ha)
+FINE = 14.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.4           core radius (a.u.)
+BETA_RADIUS = 2.4           beta_rc (a.u.) - requires the presence of RINNER
+RINNER = 1.0                Rinner (a.u.) - requires the presence of BETA_RADIUS
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = USP && USP          Type: zero or more of NCP, USP, LOCAL, NCP_PROJ_ONLY, USP_PROJ_ONLY, PSEUDIZE_ONLY. LOCAL can be used only once. 
+CHANNEL_INFO_BETA_RC = 2.0 && 2.0       Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 5.5             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut             E0                   delta E0         a             delta a %
+    Co fcc  
+200        -1.09273483E+003        6.84640000        3.48176336        0.78828517
+300        -1.09933805E+003        0.24318000        3.48060107        0.75463978
+400        -1.09957865E+003        0.00258000        3.45537159        0.02430998
+500        -1.09958028E+003        9.500000e-004     3.45448622       -0.00131945
+600        -1.09958061E+003        6.200000e-004     3.45449764       -9.886889e-004
+700        -1.09958087E+003        3.600000e-004     3.45452051       -3.266324e-004
+800        -1.09958114E+003        9.000000e-005     3.45454094        2.646405e-004
+900        -1.09958116E+003        7.000000e-005     3.45452461       -2.081486e-004
+1000       -1.09958123E+003                          3.45453180        
+exp                                                  3.544    
+
+Structure validation
+====================
+
+
+PBESOL, 600 eV, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %
+CoSi2 5.318     5.356      -0.7
+CoSi  4.391     4.444      -1.2
+Co    2.459     2.507      -1.9      3.967   4.069     -2.5   (ferromagnetic)
+Co2B  4.929     5.006      -1.5      4.095   4.212     -2.8
+
+
+END_COMMENT
+

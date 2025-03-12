@@ -1,0 +1,75 @@
+CHARGE = 14                 number of valence electrons
+COARSE = 33.0               coarse energy cutoff (Ha)
+MEDIUM = 41.0               medium energy cutoff (Ha)
+FINE = 44.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.3           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 10.5            Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0           delta E0          a            delta a %
+    Cr 
+500     -2.33759964E+003    31.04772000     2.79146168    -1.78363789
+550     -2.34426456E+003    24.38280000     2.69399068    -5.21311230
+600     -2.34956930E+003    19.07806000     2.76703419    -2.64310850
+650     -2.35372836E+003    14.91900000     2.95484329     3.96487309
+700     -2.35727212E+003    11.37524000     3.02976337     6.60090325
+750     -2.36067686E+003     7.97050000     2.80902956    -1.16551975
+800     -2.36291362E+003     5.73374000     2.75137188    -3.19418000
+850     -2.36453280E+003     4.11456000     2.81638029    -0.90688723
+900     -2.36575067E+003     2.89669000     2.86464759     0.79137673
+950     -2.36675948E+003     1.88788000     2.92602978     2.95108225
+1000    -2.36748721E+003     1.16015000     2.88121503     1.37429481
+1050    -2.36794737E+003     0.69999000     2.84334436     0.04183186
+1100    -2.36822716E+003     0.42020000     2.83638809    -0.20292148
+1150    -2.36839268E+003     0.25468000     2.84355496     0.04924163
+1200    -2.36850056E+003     0.14680000     2.84512970     0.10464809
+1250    -2.36856981E+003     0.07755000     2.84634881     0.14754180
+1300    -2.36861071E+003     0.03665000     2.84455250     0.08433971
+1350    -2.36863216E+003     0.01520000     2.84243799     0.00994131
+1400    -2.36864175E+003     0.00561000     2.84243261     0.00975233
+1450    -2.36864582E+003     0.00154000     2.84218567     0.00106356
+1500    -2.36864736E+003                    2.84215544     
+exp                                         2.871    
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine (non-magnetic)
+        a        a exp    delta a %     c    c exp   delta c %    b     b exp    delta b %
+Cr3Si 4.460     4.555      -2.1
+CrSi2 4.365     4.43       -1.5       6.313  6.36     -0.7
+Cr    2.825     2.871      -1.6  (antiferromagnetic)
+CrN   4.000     4.148      -3.6
+CrB   2.890     2.969      -2.7       2.891  2.932    -1.4      7.758   7.858     -1.3
+Cr2B  5.079     5.185      -2.0       4.227  4.316    -2.1
+
+END_COMMENT
+

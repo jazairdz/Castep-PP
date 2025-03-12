@@ -1,0 +1,67 @@
+CHARGE = 11                 number of valence electrons
+COARSE = 32.0               coarse energy cutoff (Ha)
+MEDIUM = 37.5               medium energy cutoff (Ha)
+FINE = 40.4                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BETA_RC = 1.5  Core radius for this channel (a.u.) (as many as TYPE entries)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 4.5             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q2 = 9.5             As Qc, but specifically for l=2 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid: 12x12x12, Grid: Precise, xc-functional: PBE
+
+Ecut           E0              delta E0            a          delta a %
+    Cu  
+850      -1.45318613E+003     5.29338000       3.88831902     6.96359329
+900      -1.45573544E+003     2.74407000       3.79385566     4.36500501
+950      -1.45715333E+003     1.32618000       3.71203857     2.11430240
+1000     -1.45787432E+003     0.60519000       3.69193047     1.56114963
+1050     -1.45823113E+003     0.24838000       3.67007222     0.95985205
+1100     -1.45838985E+003     0.08966000       3.65359788     0.50666004
+1150     -1.45845175E+003     0.02776000       3.64056580     0.14816129
+1200     -1.45847225E+003     0.00726000       3.63748867     0.06351269
+1250     -1.45847738E+003     0.00213000       3.63594792     0.02112807
+1300     -1.45847803E+003     0.00148000       3.63523023     0.00138522
+1350     -1.45847810E+003     0.00141000       3.63505295    -0.00349159
+1400     -1.45847848E+003     0.00103000       3.63509318    -0.00238487
+1450     -1.45847903E+003     4.800000e-004    3.63515184    -7.711042e-004
+1500     -1.45847951E+003                      3.63517987     
+exp                                            3.6147    
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %  c        c exp    delta c %
+Cu    3.571      3.596    -0.7
+Cu2O  4.232      4.2685   -0.9
+CuBr  5.613      5.6905   -1.4
+CuCl  5.289      5.4057   -2.1
+CuI   5.974      6.0427   -1.1
+Cu3Au 3.715      3.7367   -0.6
+CuPd  2.964      2.988    -0.8
+ThCu2  4.335     4.387    -1.2       3.509     3.472       1.1
+
+END_COMMENT
+
