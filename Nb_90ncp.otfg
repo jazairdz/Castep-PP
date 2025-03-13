@@ -1,0 +1,72 @@
+CHARGE = 13                 number of valence electrons
+COARSE = 16.0               coarse energy cutoff (Ha)
+MEDIUM = 22.0               medium energy cutoff (Ha)
+FINE = 24.6                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP    Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0                 delta E0             a              delta a %
+    Nb     
+300        -1.75678209E+003        8.12305000        3.35697792        1.19969223
+350        -1.75962047E+003        5.28467000        3.35342645        1.09262931
+400        -1.76155064E+003        3.35450000        3.32692625        0.29375234
+450        -1.76286829E+003        2.03685000        3.32683473        0.29099344
+500        -1.76374703E+003        1.15811000        3.33089416        0.41336930
+550        -1.76428562E+003        0.61952000        3.32487039        0.23177632
+600        -1.76459568E+003        0.30946000        3.32151311        0.13056738
+650        -1.76476422E+003        0.14092000        3.32102499        0.11585275
+700        -1.76484841E+003        0.05673000        3.31970516        0.07606504
+750        -1.76488554E+003        0.01960000        3.31839139        0.03645989
+800        -1.76489976E+003        0.00538000        3.31779144        0.01837382
+850        -1.76490409E+003        0.00105000        3.31741437        0.00700656
+900        -1.76490493E+003        2.100000e-004     3.31724219        0.00181593
+950        -1.76490500E+003        1.400000e-004     3.31718680        1.463001e-004
+1000       -1.76490514E+003                          3.31718195        
+exp                                                  3.296
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %      
+NbSi2  4.778     4.79       -0.3       6.560  6.59     -0.5
+Nb     3.280     3.296      -0.5
+NbN    4.383     4.394      -0.3
+NbO    4.195     4.2103     -0.4
+Nb3GeN 5.110     5.168      -1.1
+
+END_COMMENT
+

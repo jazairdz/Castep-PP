@@ -1,0 +1,42 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 21.0               coarse energy cutoff (Ha)
+MEDIUM = 26.0               medium energy cutoff (Ha)
+FINE = 29.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0              delta E0          a           delta a %
+    Ne   
+500     -9.11402786E+002    8.43204400      4.52265401      1.34819784
+600     -9.17486564E+002    2.34826600      4.50603067      0.97568533
+700     -9.19348772E+002    0.48605800      4.47755001      0.33746183
+800     -9.19770057E+002    0.06477300      4.46428462      0.04019770
+900     -9.19827420E+002    0.00741000      4.46278722      0.00664242
+1000    -9.19829371E+002    0.00545900      4.46248593      -1.092988e-004
+1100    -9.19831387E+002    0.00344300      4.46251099      4.522690e-004
+1200    -9.19833588E+002    0.00124200      4.46252084      6.731565e-004
+1300    -9.19834129E+002    7.010000e-004   4.46250373      2.897041e-004
+1400    -9.19834216E+002    6.140000e-004   4.46249317      5.309277e-005
+1500    -9.19834830E+002                    4.46249080      
+exp                                         4.462 
+                    
+END_COMMENT
+

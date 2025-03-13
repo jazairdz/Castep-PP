@@ -1,0 +1,74 @@
+CHARGE = 5                  number of valence electrons
+COARSE = 20.0               coarse energy cutoff (Ha)
+MEDIUM = 29.0               medium energy cutoff (Ha)
+FINE =   33.0               fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 9.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence test
+================
+Ecut         Energy           Energy Diff        Bond         Bond %
+400     -5.39955790E+002    11.29894000     1.17093650      6.56973690
+500     -5.45599151E+002    5.65557900      1.12578709      2.46058096
+600     -5.48599714E+002    2.65501600      1.10363444      0.44441531
+700     -5.50091371E+002    1.16335900      1.09835247      -0.03630990
+800     -5.50801197E+002    0.45353300      1.09907243      0.02921532
+900     -5.51107781E+002    0.14694900      1.09934784      0.05428145
+1000    -5.51217977E+002    0.03675300      1.09900385      0.02297425
+1100    -5.51247759E+002    0.00697100      1.09879430      0.00390263
+1200    -5.51252804E+002    0.00192600      1.09875906      6.951036e-004
+1300    -5.51253064E+002    0.00166600      1.09875866      6.589015e-004
+1400    -5.51253615E+002    0.00111500      1.09875392      2.271205e-004
+1500    -5.51254730E+002                    1.09875142  
+    
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a      a exp    delta a %     c    c exp   delta c %
+AlN    3.101   3.111     -0.3      4.967   4.978    -0.2
+TiN    4.216   4.238     -0.5
+VN     4.080   4.13      -1.2  
+Si3N4  7.603   7.602      0.0      2.902   2.906    -0.1
+GaN    4.502   4.52      -0.4
+YN     4.849   4.877     -0.6
+ZrN    4.563   4.61      -1.0
+NbN    4.389   4.394     -0.1
+Nb3GeN 5.122   5.168     -0.9
+InN    3.529   3.53555   -0.2      5.703  5.7005    0.0
+TaN    5.212   5.191      0.4      2.908  2.908     0.0
+LuN    4.717   4.766     -1.0
+CrN    4.006   4.148     -3.4
+DyN    4.828   4.890     -1.3
+EuN    5.005   5.014     -0.2
+ThN    5.140   5.167     -0.5   (FM)
+BkN    4.879   4.951     -1.5
+PuN    4.880   4.905     -0.5
+GdN    4.973   4.987     -0.3
+AcN    5.501   5.513     -0.2
+CmN    5.001   5.027     -0.5
+YbN    4.789   4.7852     0.1
+ErN    4.783   4.839     -1.2
+CfN    4.875   4.94      -1.3
+TbN    4.846   4.933     -1.8
+UN     4.872   4.89      -0.4
+UN2    5.245   5.31      -1.2
+NpN    4.841   4.8968    -1.1
+
+
+END_COMMENT
+

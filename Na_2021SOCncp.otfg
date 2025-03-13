@@ -1,0 +1,60 @@
+CHARGE = 9                  number of valence electrons
+COARSE = 21.0               coarse energy cutoff (Ha)
+MEDIUM = 27.0               medium energy cutoff (Ha)
+FINE = 30.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.5           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 3          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0           delta E0            a           delta a %
+    Na 
+500     -1.22140084E+003    10.21981000     4.32200777      0.75570957
+600     -1.22911134E+003    2.50931000      4.29999104      0.24245022
+700     -1.23117825E+003    0.44240000      4.29342272      0.08932798
+800     -1.23157415E+003    0.04650000      4.29043787      0.01974444
+900     -1.23161603E+003    0.00462000      4.28966777      0.00179158
+1000    -1.23161694E+003    0.00371000      4.28957048      -4.764858e-004
+1100    -1.23161857E+003    0.00208000      4.28958871      -5.138332e-005
+1200    -1.23161954E+003    0.00111000      4.28959151      1.374724e-005
+1300    -1.23161962E+003    0.00103000      4.28958555      -1.251276e-004
+1400    -1.23161994E+003    7.100000e-004   4.28958622      -1.093913e-004
+1500    -1.23162065E+003                    4.28959092  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a % 
+Na    4.237      4.210      0.6
+NaCl  5.635      5.566      1.2
+NaH   4.827      4.880     -1.1
+NaI   6.440      6.410      0.5
+NaF   4.657      4.579      1.7
+NaBr  5.968      5.973     -0.1
+NaTl  7.469      7.483     -0.2
+    
+END_COMMENT
+

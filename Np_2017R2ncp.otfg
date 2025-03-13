@@ -1,0 +1,75 @@
+CHARGE = 15                 number of valence electrons
+COARSE = 17.0               coarse energy cutoff (Ha)
+MEDIUM = 19.0               medium energy cutoff (Ha)
+FINE = 22.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 4           angular momentum of the local potential
+CORE_RADIUS = 2.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 7          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 3          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q3 = 8.0             As Qc, but specifically for l=3 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+System: tetragonal Np
+
+Cutoff        Energy                 Energy Diff        a                c                % a                % c
+550        -1.58790261E+004       15.84480000        4.69939207        0.59801992        6.61562596        0.95335174
+600        -1.58886745E+004        6.19640000        4.67150819        0.00112077        6.58533150        0.49106333
+650        -1.58925988E+004        2.27210000        4.68464755        0.28238977        6.61474143        0.93985385
+700        -1.58941846E+004        0.68630000        4.68479654        0.28557932        6.56815503        0.22895328
+750        -1.58947118E+004        0.15910000        4.67799926        0.14007249        6.55575216        0.03968750
+800        -1.58948444E+004        0.02650000        4.67296131        0.03222705        6.55297499       -0.00269164
+850        -1.58948679E+004        0.00300000        4.67147952        5.070849e-004     6.55330015        0.00227021
+900        -1.58948700E+004        9.000000e-004     4.67135435       -0.00217235        6.55287341       -0.00424172
+950        -1.58948702E+004        7.000000e-004     4.67124925       -0.00442218        6.55316407        1.936244e-004
+1000       -1.58948709E+004                          4.67145583                          6.55315138        
+exp                                                  4.723                               6.663        
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %    c        c exp    delta c %
+Np3Sn  4.568     4.632      -1.4
+Np3Tl  4.573     4.712      -2.9
+NpAl3  4.218     4.26       -1.0
+NpSn3  4.587     4.627      -0.9
+NpO2   5.324     5.4341     -2.0
+NpS    5.435     5.532      -1.8
+NpN    4.793     4.8968     -2.1
+NpP    5.523     5.614      -1.6
+NpTe   6.148     6.197      -0.8
+NpSe   5.723     5.804      -1.4
+NpAs   5.725     5.8338     -1.9
+NpAs2  3.906     3.930      -0.6      7.970     8.137     -2.1
+END_COMMENT
+

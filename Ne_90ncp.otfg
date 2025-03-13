@@ -1,0 +1,40 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 23.0               coarse energy cutoff (Ha)
+MEDIUM = 26.0               medium energy cutoff (Ha)
+FINE = 31.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0              delta E0          a           delta a %
+    Ne    
+800     -9.19807241E+002     0.07101100       5.25721629    14.37663175
+850     -9.19856877E+002     0.02137500       4.94036712     7.48322293
+900     -9.19871571E+002     0.00668100       4.72846395     2.87303207
+950     -9.19873990E+002     0.00426200       4.60527178     0.19284842
+1000    -9.19874076E+002     0.00417600       4.58534052    -0.24077847
+1050    -9.19874807E+002     0.00344500       4.58647284    -0.21614366
+1100    -9.19876104E+002     0.00214800       4.59165517    -0.10339625
+1150    -9.19877380E+002     8.720000e-004    4.59778603     0.02998749
+1200    -9.19878252E+002                      4.59640769     
+exp                                           4.462 
+                    
+END_COMMENT
+

@@ -1,0 +1,69 @@
+CHARGE = 14                 number of valence electrons
+COARSE = 23.9               coarse energy cutoff (Ha)
+MEDIUM = 26.8               medium energy cutoff (Ha)
+FINE = 29.4                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 4           angular momentum of the local potential
+CORE_RADIUS = 2.1           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 3          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CONFIG_BLOCK_START          Description of the atomic configuration for the generation (one block per channel)
+CONFIG_N : 5                N quantum number
+CONFIG_L : 2                L quantum number
+CONFIG_OCC : 0.1            Occupancy of the state
+CONFIG_BLOCK_END
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+PSEUDO_Q3 = 8.0             As Qc, but specifically for l=3 channel
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+System: hcp Nd  
+Ecut         Energy           Energy Diff        a          c        % a           % c     
+600     -6.56169449E+003    3.80706500      3.35367849  11.06952624 20.98308990 -11.36998030
+650     -6.56590140E+003    1.70361000      3.44975718  11.29259671 24.44910406 -9.58392917
+700     -6.56815831E+003    0.57515500      3.20060629  11.15939977 15.46104959 -10.65039281
+750     -6.56911957E+003    0.09452500      2.78142614  12.59133039 0.33923364  0.81460001
+800     -6.56927250E+003    0.01806000      2.77374858  12.52575952 0.06226737  0.28959582
+850     -6.56930414E+003    0.00224000      2.77236277  12.49531087 0.01227488  0.04580366
+900     -6.56930762E+003    5.000000e-004   2.77166482  12.49204312 -0.01290362 0.01963987
+950     -6.56930777E+003    4.250000e-004   2.77208940  12.48893784 0.00241289  -0.00522307
+1100    -6.56930849E+003    6.500000e-005   2.77168958  12.49117715 -0.01201027 0.01270633
+1150    -6.56930854E+003    4.000000e-005   2.77167543  12.49071217 -0.01252086 0.00898339
+1200    -6.56930862E+003                    2.77202251  12.48959018 
+
+Structure validation
+====================
+WC, Ultra-Fine
+        a        a exp    delta a %    
+NdAs   5.954     5.958    -0.1   (FM)
+
+END_COMMENT
+
