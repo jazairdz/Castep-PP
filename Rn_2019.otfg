@@ -1,0 +1,39 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 7.0                coarse energy cutoff (Ha)
+MEDIUM = 7.5                medium energy cutoff (Ha)
+FINE = 8.0                  fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Ultra-fine, xc-functional: PBESOL
+Tests on Rn2 dimer in a box
+
+Ecut         Energy             Energy Diff  
+200     -1495.865658981    0.00849447
+250     -1495.880543689    0.00105211
+300     -1495.881802641    4.226355e-004
+350     -1495.882099162    2.743750e-004
+400     -1495.882324297    1.618075e-004
+450     -1495.882449586    9.916300e-005
+500     -1495.882520760    6.357600e-005
+550     -1495.882566216    4.084800e-005
+600     -1495.882595978    2.596700e-005
+650     -1495.882617590    1.516100e-005
+700     -1495.882631984    7.964000e-006
+750     -1495.882640768    3.572000e-006
+800     -1495.882647912 
+    
+END_COMMENT
+

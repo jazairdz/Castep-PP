@@ -1,0 +1,72 @@
+CHARGE = 16                 number of valence electrons
+COARSE = 17.3               coarse energy cutoff (Ha)
+MEDIUM = 23.9               medium energy cutoff (Ha)
+FINE = 26.1                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut          E0              delta E0        a             c        delta a %       delta c %
+    Ru   
+350     -5.37429161E+003    12.66560000     2.73219432  4.32431740  0.45239019      0.65346333
+400     -5.38526598E+003    7.17841500      2.77090400  4.37600258  1.87559776      1.85649546
+450     -5.39140444E+003    4.10918500      2.71150244  4.29316286  -0.30837162     -0.07169445
+500     -5.39494468E+003    2.33906500      2.71685379  4.29582503  -0.11162285     -0.00972918
+550     -5.39710518E+003    1.25881500      2.72993152  4.30861968  0.36919550      0.28808088
+600     -5.39839730E+003    0.61275500      2.73179373  4.31295261  0.43766193      0.38893475
+650     -5.39905747E+003    0.28267000      2.72419753  4.30362092  0.15837861      0.17172909
+700     -5.39937449E+003    0.12416000      2.72041805  4.29800832  0.01942145      0.04108924
+750     -5.39952520E+003    0.04880500      2.72081144  4.29746770  0.03388503      0.02850566
+800     -5.39958976E+003    0.01652500      2.72079709  4.29727149  0.03335731      0.02393885
+850     -5.39961284E+003    0.00498500      2.72036484  4.29675445  0.01746498      0.01190410
+900     -5.39961877E+003    0.00202000      2.72001352  4.29639066  0.00454827      0.00343651
+950     -5.39961988E+003    0.00146500      2.71989982  4.29625715  3.681873e-004   3.288568e-004
+1000    -5.39962049E+003    0.00116000      2.71988264  4.29623175  -2.636823e-004  -2.623448e-004
+1050    -5.39962153E+003    6.400000e-004   2.71988416  4.29623597  -2.075877e-004  -1.640797e-004
+1100    -5.39962281E+003                    2.71988981  4.29624302      
+exp                                         2.7058      4.2816  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %    b    b exp   delta b %
+Ru     2.704     2.7058     -0.1      4.260  4.2816   -0.5
+RuAs   5.452     5.4279      0.4      2.983  2.9685    0.5      6.194  6.1834    0.2
+RuO2   4.472     4.491      -0.4      3.097  3.107    -0.3
+
+END_COMMENT
+

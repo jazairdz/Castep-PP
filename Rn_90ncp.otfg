@@ -1,0 +1,43 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 8.5                coarse energy cutoff (Ha)
+MEDIUM = 12.1               medium energy cutoff (Ha)
+FINE = 13.6                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 7.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Ultra-fine, xc-functional: PBESOL
+Tests on Rn2 dimer in a box
+
+Ecut         Energy             Energy Diff  
+200        -1.82408514E+003        7.63656000
+250        -1.82939956E+003        2.32214000
+300        -1.83110176E+003        0.61994000
+350        -1.83157475E+003        0.14695000
+400        -1.83168824E+003        0.03346000
+450        -1.83171173E+003        0.00997000
+500        -1.83171551E+003        0.00619000
+550        -1.83171600E+003        0.00570000
+600        -1.83171606E+003        0.00564000
+650        -1.83172329E+003       -0.00159000
+700        -1.83171612E+003        0.00558000
+750        -1.83172320E+003       -0.00150000
+800        -1.83172170E+003        
+	
+END_COMMENT
+

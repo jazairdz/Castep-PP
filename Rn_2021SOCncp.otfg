@@ -1,0 +1,47 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 8.5                coarse energy cutoff (Ha)
+MEDIUM = 12.1               medium energy cutoff (Ha)
+FINE = 13.6                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 7.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Ultra-fine, xc-functional: PBESOL
+Tests on Rn2 dimer in a box
+
+Ecut         Energy             Energy Diff  
+200     -1.82001582E+003    4.07257000
+250     -1.82552498E+003    1.31799000
+300     -1.82739860E+003    0.38118000
+350     -1.82795900E+003    0.10098000
+400     -1.82811233E+003    0.02431500
+450     -1.82815030E+003    0.00533000
+500     -1.82815882E+003    0.00107000
+550     -1.82816049E+003    2.350000e-004
+600     -1.82816078E+003    9.000000e-005
+650     -1.82816086E+003    5.000000e-005
+700     -1.82816095E+003    5.000000e-006
+750     -1.82816096E+003    0
+800     -1.82816093E+003    1.500000e-005
+850     -1.82816095E+003    5.000000e-006
+900     -1.82816095E+003    5.000000e-006
+950     -1.82816096E+003    0
+1000    -1.82816096E+003    0
+
+END_COMMENT
+
