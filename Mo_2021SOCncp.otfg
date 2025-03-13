@@ -1,0 +1,71 @@
+CHARGE = 14                 number of valence electrons
+COARSE = 16.0               coarse energy cutoff (Ha)
+MEDIUM = 22.4               medium energy cutoff (Ha)
+FINE = 24.5                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.4           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0           delta E0           a         delta a %
+    Mo 
+300     -2.02311757E+003    9.83319000      3.16780906  0.14508995
+350     -2.02681395E+003    6.13681000      3.20839319  1.42809082
+400     -2.02920124E+003    3.74952000      3.18811158  0.78692093
+450     -2.03069462E+003    2.25614000      3.16580730  0.08180763
+500     -2.03165492E+003    1.29584000      3.17109955  0.24911336
+550     -2.03226019E+003    0.69057000      3.17332734  0.31954140
+600     -2.03260821E+003    0.34255000      3.16897510  0.18195246
+650     -2.03279227E+003    0.15849000      3.16526558  0.06468201
+700     -2.03288496E+003    0.06580000      3.16493516  0.05423630
+750     -2.03292727E+003    0.02349000      3.16433630  0.03530431
+800     -2.03294369E+003    0.00707000      3.16382971  0.01928955
+850     -2.03294868E+003    0.00208000      3.16340079  0.00572986
+900     -2.03294968E+003    0.00108000      3.16325936  0.00125863
+950     -2.03294978E+003    9.800000e-004   3.16316649  -0.00167726
+1000    -2.03294997E+003    7.900000e-004   3.16316359  -0.00176897
+1050    -2.03295035E+003    4.100000e-004   3.16317186  -0.00150757
+1100    -2.03295076E+003                    3.16321954         
+exp                                         3.142
+
+Structure validation
+====================
+WC, Ultra-Fine
+           a        a exp    delta a %     c     c exp   delta c %
+SrMoO3    3.953     3.965      -0.3
+Mo        3.141     3.142       0.0
+MoSi2     3.196     3.2064     -0.3       7.823  7.8478   -0.3
+
+END_COMMENT
+

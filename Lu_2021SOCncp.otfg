@@ -1,0 +1,73 @@
+CHARGE = 11                 number of valence electrons
+COARSE = 14.7               coarse energy cutoff (Ha)
+MEDIUM = 20.2               medium energy cutoff (Ha)
+FINE = 24.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0           delta E0              a         c      delta a %     delta c %
+    Lu 
+350     -2.96733959E+003    5.27581000      3.59141547  5.63530634  2.19149533  2.31831439
+400     -2.97230881E+003    2.79120000      3.58494975  5.62903766  2.00751733  2.20449616
+450     -2.97514214E+003    1.37453500      3.56101369  5.58738769  1.32643160  1.44827201
+500     -2.97662684E+003    0.63218500      3.54741025  5.56615494  0.93935432  1.06275629
+550     -2.97735086E+003    0.27017500      3.53407941  5.54050622  0.56003352  0.59706143
+600     -2.97767633E+003    0.10744000      3.52498588  5.52409569  0.30128261  0.29910107
+650     -2.97781224E+003    0.03948500      3.51958321  5.51793136  0.14755306  0.18717744
+700     -2.97786489E+003    0.01316000      3.51737201  5.51188150  0.08463485  0.07733226
+750     -2.97788328E+003    0.00396500      3.51489390  5.51165296  0.01412179  0.07318269
+800     -2.97788895E+003    0.00113000      3.51507571  5.50762579  0.01929500  6.270634e-005
+850     -2.97789051E+003    3.500000e-004   3.51354245  5.50989991  -0.02433309 0.04135310
+900     -2.97789092E+003    1.450000e-004   3.51424676  5.51008704  -0.00429226 0.04475073
+950     -2.97789103E+003    9.000000e-005   3.51461225  5.50759617  0.00610747  -4.749864e-004
+1000    -2.97789110E+003    5.500000e-005   3.51384447  5.51088416  -0.01573932 0.05922382
+1050    -2.97789114E+003    3.500000e-005   3.51339420  5.50857408  -0.02855139 0.01728046
+1100    -2.97789118E+003    1.500000e-005   3.51371775  5.51012011  -0.01934497 0.04535117
+1150    -2.97789120E+003    5.000000e-006   3.51414493  5.50913804  -0.00718993 0.02752020
+1200    -2.97789121E+003                    3.51439761  5.50762234         
+exp                                         3.505       5.5486  
+    
+    
+Structure validation
+====================
+
+WC, Ultra-Fine, ferromagnetic
+        a        a exp    delta a %      c     c exp    delta c %               
+LuRh  3.314      3.334      -0.6
+LuC2  3.525      3.563      -1.1       6.016   5.964     0.9
+LuN   4.717      4.766      -1.0
+LuH2  4.971      5.033      -1.2
+LuB2  3.217      3.2442     -0.8       3.693   3.7061   -0.4
+LuAu  3.439      3.4955     -1.6    
+    
+END_COMMENT
+

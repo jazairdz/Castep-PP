@@ -1,0 +1,55 @@
+CHARGE = 3                  number of valence electrons
+COARSE = 20                 coarse energy cutoff (Ha)
+MEDIUM = 23                 medium energy cutoff (Ha)
+FINE = 27                   fine energy cutoff (Ha)
+LOCAL_CHANNEL = 1           angular momentum of the local potential
+CORE_RADIUS = 1.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 1          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which pseudization scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0            delta E0             a           delta a %
+    Li  
+400     -1.90978731E+002    5.05228100      3.52177449  0.42437505
+500     -1.94296009E+002    1.73500300      3.51187607  0.14211889
+600     -1.95534219E+002    0.49679300      3.50949023  0.07408595
+700     -1.95920853E+002    0.11015900      3.50799653  0.03149275
+800     -1.96014016E+002    0.01699600      3.50723949  0.00990530
+900     -1.96028460E+002    0.00255200      3.50696221  0.00199874
+1000    -1.96029129E+002    0.00188300      3.50689989  2.214818e-004
+1100    -1.96029634E+002    0.00137800      3.50689915  2.004386e-004
+1200    -1.96030467E+002    5.450000e-004   3.50690065  2.433197e-004
+1300    -1.96030901E+002    1.110000e-004   3.50689728  1.470683e-004
+1400    -1.96030971E+002    4.100000e-005   3.50689346  3.828623e-005
+1500    -1.96031012E+002                    3.50689212  
+         
+
+Structure validation
+====================
+WC functional, extra-fine
+        a        a exp       delta a %   
+Li      3.443    3.451       -0.2
+LiF     4.003    3.964        1.0
+LiCl    5.064    5.074       -0.2
+LiBr    5.419    5.445       -0.5
+LiI     5.914    5.946       -0.5
+LiH     3.981    4.0271      -1.1
+Li2O    4.572    4.573        0.0
+
+END_COMMENT
+
