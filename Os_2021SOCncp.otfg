@@ -1,0 +1,65 @@
+CHARGE = 16                 number of valence electrons
+COARSE = 13.6               coarse energy cutoff (Ha)
+MEDIUM = 19.5               medium energy cutoff (Ha)
+FINE = 23.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.8           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0              delta E0        a            c       delta a %        delta c %
+    Os 
+300     -5.42330370E+003    6.35592500      2.74034715  4.32807341  -0.43197664     -0.31905798
+350     -5.43021565E+003    2.89995000      2.77370480  4.36873834  0.78004348      0.61750620
+400     -5.43352451E+003    1.24552000      2.77028302  4.36459178  0.65571596      0.52200580
+450     -5.43490484E+003    0.55535500      2.75410289  4.34665733  0.06782569      0.10895291
+500     -5.43552375E+003    0.24590000      2.75352065  4.34403417  0.04667052      0.04853821
+550     -5.43580905E+003    0.10325000      2.75380515  4.34384811  0.05700753      0.04425306
+600     -5.43593428E+003    0.04063500      2.75310737  4.34306709  0.03165433      0.02626510
+650     -5.43598481E+003    0.01537000      2.75248247  4.34230695  0.00894938      0.00875812
+700     -5.43600465E+003    0.00545000      2.75236543  4.34211102  0.00469668      0.00424569
+750     -5.43601202E+003    0.00176500      2.75228196  4.34199719  0.00166410      0.00162406
+800     -5.43601452E+003    5.150000e-004   2.75225490  4.34195461  6.808572e-004   6.433370e-004
+850     -5.43601528E+003    1.350000e-004   2.75224262  4.34193611  2.344552e-004   2.173591e-004
+900     -5.43601549E+003    3.000000e-005   2.75223824  4.34192979  7.527741e-005   7.177580e-005
+950     -5.43601554E+003    5.000000e-006   2.75223664  4.34192742  1.736504e-005   1.721821e-005
+1000    -5.43601555E+003                    2.75223616  4.34192667  
+exp                                         2.7353      4.3191  
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %    b    b exp   delta b %
+Os     2.740     2.7352      0.2       4.313  4.319    -0.1
+OsO2   4.473     4.5003     -0.4       3.184  3.1839    0.0
+OsP2   5.094     5.1012     -0.1       2.922  2.9183    0.1     5.892  5.9022    -0.2
+        
+END_COMMENT
+

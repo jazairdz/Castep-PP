@@ -1,0 +1,109 @@
+CHARGE = 6                  number of valence electrons
+COARSE = 23.0               coarse energy cutoff (Ha)
+MEDIUM = 29.0               medium energy cutoff (Ha)
+FINE =   34.0               fine energy cutoff (Ha)
+LOCAL_CHANNEL = 1           angular momentum of the local potential
+CORE_RADIUS = 1.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP    Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 2          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 9.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+O2 molecule (spin-polarized)
+
+Ecut        Energy           Energy Diff       Bond     Bond %
+300     -8.2820128E+02      19.9991525      1.39007562    17.31912102
+350     -8.3820262E+02      14.998482       1.31858242    11.28526267
+400     -8.4622384E+02      10.987871       1.26317113     6.608679796
+450     -8.5242158E+02       7.888998       1.22287135     3.207472913
+500     -8.5711926E+02       5.5401625      1.19546091     0.894096085
+550     -8.6059839E+02       3.8005965      1.17990043    -0.41917192
+600     -8.6308873E+02       2.5554235      1.17560923    -0.781339132
+650     -8.6487800E+02       1.6607895      1.17967845    -0.437906511
+700     -8.6609924E+02       1.0501695      1.18576093     0.075440531
+750     -8.6693601E+02       0.631784       1.18919828     0.365544806
+800     -8.6746976E+02       0.3649105      1.18945657     0.387343876
+850     -8.6780231E+02       0.1986355      1.18820727     0.281905887
+900     -8.6799358E+02       0.103001       1.18683954     0.166472684
+950     -8.6810073E+02       0.0494275      1.18580082     0.078807153
+1000    -8.6815540E+02       0.0220885      1.18522795     0.030458269
+1100    -8.6819241E+02       0.0035845      1.18492254     0.004682382
+1200    -8.6819738E+02       0.0011025      1.18490371     0.003093174
+1300    -8.6819756E+02       0.0010085      1.1848888      0.001834805
+1400    -8.6819844E+02       0.000572       1.18489545     0.002396049
+1500    -8.6819958E+02                      1.18486706       
+
+Structure validation
+====================
+
+PBESOL,  Ultra-Fine
+        a        a exp    delta a %     c    c exp   delta c %   b       b exp delta b %
+MgO    4.233     4.188       1.1
+Li2O   4.577     4.573       0.1
+BeO    2.697     2.6979      0.0      4.380   4.3772    0.1
+K2O    6.325     6.436      -1.7
+CaO    4.772     4.8105     -0.8
+SrTiO3 3.896     3.898      -0.1
+ZrSiO4 6.623     6.5991      0.4      5.994   5.9841    0.2
+CaWO4  5.232     5.2429     -0.2     11.268  11.3737   -0.9
+Cu2O   4.232     4.2685     -0.9
+ZnO    3.230     3.2489     -0.6      5.215   5.2053    0.2
+GeO2   4.441     4.40656     0.1      2.894   2.86186   1.1
+ZrO2   5.067     5.07       -0.1      
+NbO    4.195     4.2103     -0.4   
+SrHfO3 4.084     4.069       0.4     
+SrMoO3 3.959     3.965      -0.2    
+SrO    5.118     5.1602     -0.8    
+RuO2   4.477     4.491      -0.3      3.100   3.107    -0.2
+Ag2O   4.720     4.76       -0.8
+SnO2   4.747     4.73735     0.2      3.197   3.1864    0.3
+CsTcO4 5.741     5.718       0.4     14.396  14.304     0.6       5.946   5.918     0.5
+BaO    5.517     5.523      -0.1
+IrO2   4.462     4.5051     -1.0      3.144   3.1586   -0.5
+OsO2   4.457     4.5003     -1.0      3.179   3.1839   -0.2
+TcAgO4 5.277     5.3026     -0.5      11.429 11.81     -3.2
+TaO    4.426     4.422       0.1
+ReO2   4.812     4.8094      0.1      4.556   4.6007   -1.0       5.603   5.6433   -0.7
+Bi2O3  5.555     5.525       0.5
+BiOF   3.768     3.748       0.5      6.198   6.224    -0.4
+MnO    4.391     4.445      -1.2
+AmO    4.969     5.05       -1.6
+AmO2   5.327     5.376      -0.9
+ThO2   5.537     5.592      -1.0
+ThO    5.629     5.682      -0.9
+CeO2   5.396     5.412      -0.3
+BkO2   5.321     5.334      -0.2
+PaO2   5.380     5.505      -2.3
+PaO    4.863     4.961      -2.0
+PuO    4.897     4.959      -1.3
+PuO2   5.312     5.396      -1.6   
+PuOCl  3.925     4.012      -2.2      6.676    6.792   -1.7
+EsOCl  3.868     3.948      -2.0      6.633    6.702   -1.0
+TbO2   5.206     5.22       -0.3
+AcOCl  4.197     4.24       -1.0      7.023    7.07    -0.7
+AcOBr  4.254     4.27       -0.4      7.441    7.40     0.6
+PrO2   5.326     5.394      -1.3
+LaTiO3 5.511     5.625      -2.0      5.561    5.592   -0.6      7.871   7.905    -0.4
+CmO2   5.372     5.372       0.0
+YbO    4.804     4.86       -1.2
+CfO2   5.279     5.31       -0.6
+Cf2O3  3.689     3.72       -0.8      5.728    5.96    -3.9
+CfOCl  3.905     3.956      -1.3      6.571    6.662   -1.4
+CfOBr  3.858     3.9        -1.1      8.167    8.0      2.1
+SmO    4.959     4.988      -0.6         
+ErLaO3 6.015     6.07       -0.9      5.809    5.85    -0.7      8.407   8.45     -0.5
+     
+END_COMMENT
+
