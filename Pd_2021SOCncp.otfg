@@ -1,0 +1,78 @@
+CHARGE = 18                 number of valence electrons
+COARSE = 19.9               coarse energy cutoff (Ha)
+MEDIUM = 25.4               medium energy cutoff (Ha)
+FINE = 28.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.5           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP   Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY 
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CONFIG_BLOCK_START          Description of the atomic configuration for the generation (one block per channel)
+CONFIG_N : 5                N quantum number
+CONFIG_L : 0                L quantum number
+CONFIG_OCC : 0.5            Occupancy of the state
+CONFIG_BLOCK_END
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 8.0             Qc value (used only by qc, qb, and es schemes)
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut           E0            delta E0           a           delta a %
+    Pd 
+450     -3.52313703E+003    11.22153000     3.98548772  0.96337023
+500     -3.52818017E+003    6.17839000      3.97003532  0.57191840
+550     -3.53115192E+003    3.20664000      3.98384266  0.92169637
+600     -3.53282124E+003    1.53732000      3.98586787  0.97300055
+650     -3.53366722E+003    0.69134000      3.96920896  0.55098443
+700     -3.53407283E+003    0.28573000      3.95788110  0.26401853
+750     -3.53425274E+003    0.10582000      3.95195549  0.11390657
+800     -3.53432504E+003    0.03352000      3.95040921  0.07473502
+850     -3.53434928E+003    0.00928000      3.94844551  0.02498922
+900     -3.53435575E+003    0.00281000      3.94780460  0.00875318
+950     -3.53435673E+003    0.00183000      3.94750058  0.00105138
+1000    -3.53435680E+003    0.00176000      3.94741058  -0.00122860
+1050    -3.53435712E+003    0.00144000      3.94740873  -0.00127531
+1100    -3.53435766E+003    9.000000e-004   3.94743117  -7.070271e-004
+1150    -3.53435818E+003    3.800000e-004   3.94744648  -3.190414e-004
+1200    -3.53435856E+003                    3.94745908  
+exp                                         3.877 
+
+Structure validation
+====================
+
+WC, Ultra-Fine
+
+        a        a exp    delta a %     c     c exp    delta c %   b    b exp   delta b %
+PdBe   2.801     2.813      -0.4
+PdSi   5.560     5.6173     -1.0       6.098  6.1534   -0.9        3.464  3.3909   2.2
+CuPd   2.976     2.988      -0.4
+Pd     3.902     3.877       0.6
+PdH    4.091     4.02        1.7
+                            
+END_COMMENT
