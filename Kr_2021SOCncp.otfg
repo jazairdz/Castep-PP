@@ -1,0 +1,49 @@
+CHARGE = 8                  number of valence electrons
+COARSE = 7.0                coarse energy cutoff (Ha)
+MEDIUM = 9.0                medium energy cutoff (Ha)
+FINE = 11.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 1.9           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 4          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+    Kr  
+Ecut        E0             delta E0          a         %a
+100 -6.21344947E+002    4.78711400      7.27061025  0.17500615
+150 -6.24875086E+002    1.25697500      7.26043555  0.03481833
+200 -6.25738538E+002    0.39352300      7.25878416  0.01206530
+250 -6.26029144E+002    0.10291700      7.25838125  0.00651399
+300 -6.26111878E+002    0.02018300      7.25818376  0.00379301
+350 -6.26126070E+002    0.00599100      7.25794360  4.840719e-004
+400 -6.26127033E+002    0.00502800      7.25790286  -7.729977e-005
+450 -6.26128022E+002    0.00403900      7.25790415  -5.951309e-005
+500 -6.26129396E+002    0.00266500      7.25791264  5.749050e-005
+550 -6.26130204E+002    0.00185700      7.25791231  5.289729e-005
+600 -6.26130503E+002    0.00155800      7.25790843  -4.573064e-007
+650 -6.26130755E+002    0.00130600      7.25790683  -2.255389e-005
+700 -6.26131173E+002    8.880000e-004   7.25790683  -2.257844e-005
+750 -6.26131660E+002    4.010000e-004   7.25790759  -1.213042e-005
+800 -6.26132061E+002                    7.25790847  
+    
+Structure validation
+====================
+WC, Ultra-Fine
+        Kr-F     Kr-F exp    delta %
+KrF2   1.901      1.89       0.6
+                    
+END_COMMENT
+

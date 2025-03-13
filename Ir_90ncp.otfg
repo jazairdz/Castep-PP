@@ -1,0 +1,58 @@
+CHARGE = 15                 number of valence electrons
+COARSE = 10.0               coarse energy cutoff (Ha)
+MEDIUM = 12.8               medium energy cutoff (Ha)
+FINE = 14.0                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 2.5           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 6.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0            delta E0          a           delta a %
+    Ir    
+250     -2.09072804E+003     7.74177000     4.17076194     7.74718833
+300     -2.09689834E+003     1.57147000     3.88458300     0.35406062
+350     -2.09818723E+003     0.28258000     3.88491755     0.36270324
+400     -2.09844031E+003     0.02950000     3.87590308     0.12982396
+450     -2.09846816E+003     0.00165000     3.87122785     0.00904437
+500     -2.09846962E+003     1.900000e-004  3.87090184     6.224217e-004
+550     -2.09846968E+003     1.300000e-004  3.87088493     1.855511e-004
+600     -2.09846975E+003     6.000000e-005  3.87088451     1.745794e-004
+650     -2.09846977E+003     4.000000e-005  3.87088199     1.095782e-004
+700     -2.09846978E+003     3.000000e-005  3.87088039     6.814675e-005
+750     -2.09846980E+003     1.000000e-005  3.87087901     3.268723e-005
+800     -2.09846981E+003                    3.87087775     
+exp                                         3.831
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a      a exp    delta a %     c    c exp   delta c %
+IrAl3 4.274    4.246      0.7      7.746   7.756    -0.1
+Ir    3.831    3.831      0.0
+IrO2  4.473    4.5051    -0.3      3.146   3.1586   -0.4
+
+END_COMMENT
+

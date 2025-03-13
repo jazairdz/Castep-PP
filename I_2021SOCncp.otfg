@@ -1,0 +1,54 @@
+CHARGE = 7                  number of valence electrons
+COARSE = 4.8                coarse energy cutoff (Ha)
+MEDIUM = 8.0                medium energy cutoff (Ha)
+FINE = 9.2                  fine energy cutoff (Ha)
+LOCAL_CHANNEL = 2           angular momentum of the local potential
+CORE_RADIUS = 2.2           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut     E0                delta E0          a        delta a %
+    I2 diatomic 
+100 -1.24009063E+003    5.18689500      2.69878032  -0.96582801
+150 -1.24680238E+003    1.83102000      2.74807536  0.84309784
+200 -1.24962040E+003    0.42201000      2.72394140  -0.04251954
+250 -1.25033611E+003    0.06415500      2.72481763  -0.01036549
+300 -1.25045378E+003    0.00532000      2.72533536  0.00863308
+350 -1.25046318E+003    6.200000e-004   2.72515970  0.00218708
+400 -1.25046344E+003    4.900000e-004   2.72508291  -6.308030e-004
+450 -1.25046380E+003    3.100000e-004   2.72516988  0.00256064
+500 -1.25046394E+003    2.400000e-004   2.72516492  0.00237863
+550 -1.25046406E+003    1.800000e-004   2.72514881  0.00178746
+600 -1.25046426E+003    8.000000e-005   2.72514340  0.00158893
+650 -1.25046442E+003                    2.72510010      
+exp                                     2.667   
+
+Structure validation
+====================
+Ultrafine settings, WC
+        a        a exp     delta a %     c    c exp   delta c %
+LiI    5.914     5.946      -0.5
+NaI    6.440     6.410       0.5
+KI     7.028     6.99        0.5
+CuI    5.986     6.0427     -0.9
+RbI    7.342     7.26        1.1
+CsI    4.524     4.51        0.3
+BaFI   4.610     4.654      -0.9       7.917  7.962    -0.6
+Hg2I2  4.886     4.8974     -0.2      11.673 11.649     0.2
+END_COMMENT
+

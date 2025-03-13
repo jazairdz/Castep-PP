@@ -1,0 +1,66 @@
+CHARGE = 17                 number of valence electrons
+COARSE = 13.7               coarse energy cutoff (Ha)
+MEDIUM = 17.4               medium energy cutoff (Ha)
+FINE = 20.4                 fine energy cutoff (Ha)
+LOCAL_CHANNEL = 3           angular momentum of the local potential
+CORE_RADIUS = 1.6           core radius (a.u.)
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 6          N quantum number
+CHANNEL_INFO_L = 0          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 1          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP     Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+CHANNEL_INFO_BLOCK_START    Start of the information block for the generated channels 
+CHANNEL_INFO_N = 5          N quantum number
+CHANNEL_INFO_L = 2          L quantum number (s=0, p=1, d=2, f=3)
+CHANNEL_INFO_TYPE = NCP && NCP    Type: one of NCP, USP, LOCAL, NCP_PROJ_ONLY,  USP_PROJ_ONLY
+CHANNEL_INFO_BLOCK_END      End of the information block for the generated channels 
+PSEUDO_SCHEME = 'qc'        Which scheme to use; allowed values are tm, pn, fh, qc, qb, es, 2b
+PSEUDO_QC = 7.0             Qc value (used only by qc, qb, and es schemes)
+
+
+START_COMMENT
+
+Convergence testing
+===================
+Settings:   MP grid and grid_scale: Fine, xc-functional: PBE
+
+Ecut            E0            delta E0          a           delta a %
+    Ir    
+300     -3.18788819E+003     8.18548000     3.83907962    -0.85907379
+350     -3.19259092E+003     3.48275000     3.90686444     0.89141068
+400     -3.19474583E+003     1.32784000     3.91343307     1.06103986
+450     -3.19557510E+003     0.49857000     3.87301524     0.01728427
+500     -3.19590127E+003     0.17240000     3.87338929     0.02694386
+550     -3.19602131E+003     0.05236000     3.87415286     0.04666240
+600     -3.19606130E+003     0.01237000     3.87369271     0.03477938
+650     -3.19607069E+003     0.00298000     3.87254219     0.00506821
+700     -3.19607229E+003     0.00138000     3.87238783     0.00108196
+750     -3.19607255E+003     0.00112000     3.87234136    -1.182373e-004
+800     -3.19607288E+003     7.900000e-004  3.87234246    -8.963259e-005
+850     -3.19607326E+003     4.100000e-004  3.87235071     1.233102e-004
+900     -3.19607352E+003     1.500000e-004  3.87234955     9.337370e-005
+950     -3.19607364E+003     3.000000e-005  3.87234986     1.014078e-004
+1000    -3.19607367E+003                    3.87234593
+exp                                         3.831
+
+Structure validation
+====================
+
+PBESOL, Ultra-Fine
+        a      a exp    delta a %     c    c exp   delta c %
+IrAl3 4.271    4.246      0.6      7.738   7.756    -0.2
+Ir    3.833    3.831      0.0
+IrO2  4.462    4.5051    -1.0      3.144   3.1586   -0.5
+
+END_COMMENT
+
